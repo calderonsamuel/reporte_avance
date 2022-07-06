@@ -1,0 +1,7 @@
+services:
+  app:
+    image: reporte_avance:1.0
+    ports:
+      - 3838:3838
+    volumes:
+      - .Renviron:/srv/shiny-server/app/.Renviron

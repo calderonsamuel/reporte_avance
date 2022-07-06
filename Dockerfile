@@ -11,7 +11,6 @@ RUN R -e "pak::pak('calderonsamuel/appReporteAvance', ask = FALSE)"
 WORKDIR /srv/shiny-server/app
 
 COPY app.R app.R
-COPY .Renviron .Renviron
 
 EXPOSE 3838
 
