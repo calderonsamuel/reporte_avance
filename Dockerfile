@@ -12,6 +12,9 @@ WORKDIR /srv/shiny-server/app
 
 COPY app.R app.R
 
+RUN rm /etc/shiny-server/shiny-server.conf
+COPY shiny-server.conf /etc/shiny-server/shiny-server.conf
+
 EXPOSE 3838
 
 CMD ["/init"]
