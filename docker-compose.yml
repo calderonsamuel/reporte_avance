@@ -5,12 +5,13 @@ services:
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: example
+      MARIADB_DATABASE: reportes
 
   app:
-    image: reporte_avance:0.2.3
+    image: calderonsamuel/reporte_avance:0.2.3
     ports:
       - 3838:3838
-    volumes:
-      - .Renviron:/srv/shiny-server/app/.Renviron
     env_file:
       - .env
+    environment:
+      DB_HOST: db
