@@ -6,7 +6,7 @@ RUN apt install -y libxml2-dev
 
 RUN R -e "install.packages('pak', repos='http://cran.rstudio.com/')"
 RUN R -e "install.packages('rlang', repos='http://cran.rstudio.com/')"
-RUN R -e "pak::pak('calderonsamuel/appReporteAvance@v0.1.0', ask = FALSE)"
+RUN R -e "pak::pak('calderonsamuel/appReporteAvance@v0.2.3', ask = FALSE)"
 
 WORKDIR /srv/shiny-server/app
 
